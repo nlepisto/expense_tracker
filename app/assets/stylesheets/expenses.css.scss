@@ -1,57 +1,22 @@
 // Place all the styles related to the expenses controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
+// You can use Sass (SCSS) here:http://sass-lang.com/
 table.expenses {
-  width: 100%;
-  border: 2px solid #000;
-  border-collapse: collapse;
-  caption {
-    background-color: #cccccc;
-  }
-  tr:nth-child(even) {
-    background-color: #f0e68c;
-  }
-  td, th {
-    border: 1px solid #000;
-    padding: 4px;
-  }
-  td:nth-child(1) {
-    width: 50px
-  }
-  td:nth-child(2) {
-    width: 150px
-  }
-  td:nth-child(n+4) {
-    width: 60px
-  }
+    width:100%;
+    border:.2em solid #CDCDCD;
+    tr.odd {background-color:#cdcfcf;}
+    tr.even {background-color:#d3f4ed;}
+    tr:first-child {background-color:#969696;}
+    td, th {padding:.5em;color:#000;}
+    th {font-weight:bold;text-align:left;}
+    a {color:#000;}
+    th a{text-decoration:underline;}
 }
-
 .sub-container {
-  border: 1px solid #000;
-  margin: 5px;
-  label {
-    display: block;
-    float: left;
-    width: 70px;
-    font-weight: bold;
-  }
-
-  span {
-    padding-left: 50px;
-  }
-
-  .line-item {
-    padding: 5px 5px;
-  }
-}
-
-div.element {
-  margin-top: 20px;
-}
-
-nav {
-  a {
-    margin: 15px;
-  }
+    width:90%;
+    max-width:600px;
+    min-width:320px;
+    table{border:1px solid #000;width:100%;}
+    table td{padding:10px 15px;}
+    table td:first-child{font-weight:bold;}
 }

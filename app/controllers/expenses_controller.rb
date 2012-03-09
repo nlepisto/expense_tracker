@@ -2,7 +2,8 @@ class ExpensesController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    @expenses = Expense.find_all_by_user_id(current_user.id)
+    #call the model with updated sort & pagination code
+    @expenses = Expense.list(current_user.id, params, 'id')
   end
 
   def show

@@ -1,26 +1,28 @@
+<div class="title"><h1>Expenses</h1></div>
 
 <table class="expenses">
-  <caption><h2>Expenses</h2></caption>
-  <tr>
-    <th>Amount</th>
-    <th>Category</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-  <% @expenses.each do |expense| %>
     <tr>
-      <td><%= expense.amount %></td>
-      <td><%= expense.category %></td>
-      <td><%= expense.description %></td>
-      <td><%= link_to 'Show', expense %></td>
-      <td><%= link_to 'Edit', edit_expense_path(expense) %></td>
-      <td><%= link_to 'Delete', expense, confirm: 'Are you sure?', method: :delete %></td>
+        <th align="center"><%= sort_link 'Amount', :amount %></th>
+        <th align="center"><%= sort_link 'Category', :category %></th>
+        <th align="left">Description</th>
+        <th align="center"></th>
+        <th align="center"></th>
     </tr>
-  <% end %>
+    <% @expenses.each do |expense| %>
+    <tr class="<%= cycle("even","odd") %>">
+        <td align="center" valign="middle">$<%= expense.amount %></td>
+        <td align="center" valign="middle"><%= expense.category %></td>
+        <td align="left" valign="middle"><%= link_to expense.description, expense %></td>
+        <td align="center" valign="middle"><%= link_to 'Edit', edit_expense_path(expense) %></td>
+        <td align="center" valign="middle"><%= link_to 'Delete', expense, confirm: 'Are you sure?', method: :delete %></td>
+    </tr>
+    <% end %>
 </table>
-
 <br />
-
-<%= link_to 'Add Expense', new_expense_path %>
+<%= button_to 'Add Expense', new_expense_path, :method => :get %>
+<div class="pagination">
+    <div class="page_info">
+        <%= page_entries_info @posts %>
+    </div>
+    <%= will_paginate @expenses, :container => false %>
+</div>

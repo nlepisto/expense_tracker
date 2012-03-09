@@ -1,22 +1,26 @@
-<h2>Expense detail</h2>
+<div class="title"><h1>Expense Detail</h1></div>
+<br />
 
 <div class="sub-container">
-  <div class="line-item">
-    <label>Amount</label>
-    <span>$<%= @expense.amount %></span>
-  </div>
-  <div class="line-item">
-    <label>Category</label>
-    <span><%= @expense.category %></span>
-  </div>
-  <div class="line-item">
-    <label>Description</label>
-    <span><%= @expense.description %></span>
-  </div>
+    <table>
+        <tr>
+            <td align="right" valign="top">Amount</td>
+            <td align="left" valign="top">$<%= @expense.amount %></td>
+        </tr>
+        <tr>
+            <td align="right" valign="top">Category</td>
+            <td align="left" valign="top"><%= @expense.category %></td>
+        </tr>
+        <tr>
+            <td align="right" valign="top">Description</td>
+            <td align="left" valign="top"><%= @expense.description %></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right">
+                <%= link_to "Back", expenses_path %>&nbsp;&nbsp;&nbsp;
+                <%= link_to "Edit", edit_expense_path(@expense) %>&nbsp;&nbsp;&nbsp;
+                <%= link_to 'Delete', @expense, confirm: 'Are you sure?', method: :delete %>
+            </td>
+        </tr>
+    </table>
 </div>
-
-<nav>
-  <%= link_to "back", expenses_path %>
-  <%= link_to "edit", edit_expense_path(@expense) %>
-  <%= link_to 'Delete', @expense, confirm: 'Are you sure?', method: :delete %>
-</nav>

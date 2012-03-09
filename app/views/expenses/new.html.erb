@@ -1,7 +1,8 @@
-<h2>Create Expense</h2>
+<div class="title"><h1>Create New Expense</h1></div>
+<br />
 
 <%= render 'form' %>
 
-<div class="element">
-  <%= link_to 'Back', expenses_path %>
-</div>
+<br />
+
+<%= link_to 'Cancel', expenses_path, :method => :get %>

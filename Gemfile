@@ -3,7 +3,10 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.1'
 gem 'pg'
 gem 'jquery-rails'
+# used for auth
 gem 'devise'
+# used for pagination in the expense list
+gem 'will_paginate'
 
 # Gems used only for assets and not required
 # in production environments by default.

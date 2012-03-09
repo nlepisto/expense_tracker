@@ -1,0 +1,83 @@
+body{
+    background-color:#6f1414;   /* what can I say? my favorite color is red :) */
+    color:#fff;
+    font-family:'Armata',Helvetica,Arial,sans-serif;  /* using google web font Armata, then Helvetica as a backup */
+    font-size:small;            /* set base font-size relative to device default of 'small' */
+    line-height:1.5em;          /* set base line height to be relative to base line height; maximizes site accessibility and readability */
+}
+a{
+    color:#fff;
+}
+a:link, a:visited, a:active{
+    text-decoration:none;
+}
+a:hover{
+    text-decoration:underline;
+}
+h1{
+    font-size:180%;     /* set the font size as a percentage of the base; maximizes site accessibility and readability */
+    font-weight:bold;
+    margin:0;
+    padding:0;
+}
+h2{
+    font-size:150%;     /* set the font size as a percentage of the base; maximizes site accessibility and readability */
+    font-weight:bold;
+    margin:0;
+    padding:0;
+}
+h3{
+    font-size:120%;     /* set the font size as a percentage of the base; maximizes site accessibility and readability */
+    font-weight:bold;
+    margin:0;
+    padding:0;
+}
+#main-container{
+    width:100%;         /* fill up the viewport width */
+    min-width:300px;    /* minimum size the viewport can be without horizontal scrollbars */
+    max-width:1600px;   /* expands the content to a maximum of 1600px */
+    margin: 0 auto;     /* centers the content horizontally within the viewport */
+    div#user_nav{float:right;text-align:right;margin:1em 0;font-size:110%;} /* keep nav always floated top right */
+}
+.content{
+    float:left;
+    width:90%;          /* have the content fill up the middle 90% of the viewport */
+    margin:0 5%;        /* leave room (if available) in viewport on either side */
+}
+.form{
+    div {padding:5px 0;}
+}
+
+input[type=text], input[type=email], input[type=password], textarea{
+    width:100%;
+    min-width:80px;
+    max-width:250px;
+    height:1.5em;
+}
+textarea{
+    height:8em;
+}
+/*  Styles for viewport widths between 1px and 480px
+    Make the font sizes smaller and decrease width of textboxes / textareas
+*/
+@media all and (max-width:480px) and (min-width:1px) {
+    #main-container {
+        font-size:80%;
+    }
+    input[type=text], input[type=email], input[type=password], textarea{
+        min-width:75px;
+        max-width:175px;
+    }
+}
+/*  Styles for viewport widths between 1025px and ~ infinity
+    Make the font sizes bigger and increase width of textboxes / textareas
+ */
+@media all and (max-width:9999px) and (min-width:1025px) {
+    #main-container {
+        font-size:120%;
+    }
+    input[type=text], input[type=email], input[type=password], textarea{
+        min-width:150px;
+        max-width:350px;
+    }
+}

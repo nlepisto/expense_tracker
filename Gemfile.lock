@@ -31,6 +31,7 @@ GEM
     archive-tar-minitar (0.5.2)
     arel (3.0.0)
     bcrypt-ruby (3.0.1)
+    bcrypt-ruby (3.0.1-x86-mingw32)
     builder (3.0.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -71,6 +72,7 @@ GEM
     multi_json (1.0.4)
     orm_adapter (0.0.6)
     pg (0.13.1)
+    pg (0.13.1-x86-mingw32)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.1)
@@ -144,9 +146,11 @@ GEM
       multi_json (>= 1.0.2)
     warden (1.1.0)
       rack (>= 1.0)
+    will_paginate (3.0.3)
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
@@ -160,3 +164,4 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   simplecov
   uglifier (>= 1.0.3)
+  will_paginate

@@ -1,23 +1,27 @@
-<div>
+<div class="form">
   <%= form_for(@expense) do |f| %>
     <% @expense.errors.full_messages.each do |msg| %>
-      <h2><%= msg %></h2>
+      <p><h3><%= msg %></h3></p>
     <% end %>
-    <div class="row">
-      <div class="element"><%= f.label :amount %></div>
+
+    <div>
+      <%= f.label :amount %><br />
       <%= f.text_field :amount %>
     </div>
-    <div class="row">
-      <div class="element"><%= f.label :category %></div>
+
+    <div>
+      <%= f.label :category %><br />
       <%= f.text_field :category %>
     </div>
-    <div class="row">
-      <div class="element"><%= f.label :description %></div>
+
+    <div>
+      <%= f.label :description %><br />
       <%= f.text_area :description %>
     </div>
+
     <div>
-      <div class="element"></div>
-      <%= f.submit %>
+        <%= f.submit %>
     </div>
   <% end %>
+
 </div>
